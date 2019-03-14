@@ -1,0 +1,45 @@
+@import '../../assets/scss/variables';
+@import '../../assets/scss/mixins';
+
+.page {
+
+  
+  &__title {
+    font-family: $typographic-font-family-sans;
+    font-size: $typographic-base-font-size * 1.5875;
+    @include line-height(1.5);
+    @include margin-top(0);
+    @include margin-bottom(.5);
+  }
+
+  &__body {
+    font-size: $typographic-base-font-size;
+    @include line-height(1);
+    @include margin(0, 0, 1);
+  }
+
+}
+
+@include breakpoint-sm {
+  .page {
+    lost-column: 7/12;
+
+    &__inner {
+      padding: 30px 20px;
+    }
+
+  }
+
+}
+
+@include breakpoint-md {
+  .page {
+    lost-column: 2/3;
+
+    &__inner {
+      padding: 40px 35px;
+    }
+
+  }
+
+}

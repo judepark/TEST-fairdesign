@@ -1,0 +1,14 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.meta {
+  &__date {
+    font-size: $typographic-small-font-size;
+    color: $color-base;
+    font-weight: 600;
+    text-transform: normal;
+    display: inline;
+    
+  }
+
+}

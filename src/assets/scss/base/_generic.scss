@@ -1,0 +1,212 @@
+
+
+/** 
+ * Generic
+ */
+html {
+  font-size: $typographic-root-font-size;
+  max-width: 820px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  padding: 0 30px;
+}
+
+body {
+  margin: 0;
+  font-family: $typographic-font-family;
+  color: $typographic-base-font-color;
+  line-height: $typographic-base-line-height;
+  font-size: $typographic-base-font-size;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3 {
+  font-family: $typographic-font-family-sans;
+  font-weight: 600;
+}
+
+h4,
+h5,
+h6 {
+  font-family: $typographic-font-family;
+  font-weight: 600;
+}
+
+
+
+h1 {
+  font-size: $typographic-base-font-size * 1.5875;
+  @include line-height(2);
+  @include margin-top(2);
+  @include margin-bottom(1);
+}
+
+h2 {
+  font-size: $typographic-base-font-size * 1.2875;
+  @include line-height(1.5);
+  @include margin-top(2);
+  @include margin-bottom(.5);
+}
+
+h3 {
+  font-size: $typographic-base-font-size * 0.9875;
+  @include line-height(1);
+  @include margin-top(2);
+  @include margin-bottom(.5);
+}
+
+h4 {
+  font-size: $typographic-base-font-size;
+  @include line-height(1);
+  @include margin-top(2);
+  @include margin-bottom(.5);
+}
+
+h5 {
+  font-size: $typographic-base-font-size;
+  @include line-height(1);
+  @include margin-top(2);
+  @include margin-bottom(.5);
+}
+
+h6 {
+  font-size: $typographic-base-font-size;
+  @include line-height(1);
+  @include margin-top(2);
+  @include margin-bottom(.5);
+}
+
+.footnotes{
+  max-width: $layout-post-width;
+  margin: 0;
+  font-family: $typographic-font-family;
+  color: $color-gray;
+  line-height: $typographic-base-line-height;
+  font-size: $typographic-medium-font-size;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#fn-1 > p > a, #fn-2 > p > a, #fn-3 > p > a, #fn-4 > p > a, 
+#fn-5 > p > a, #fn-6 > p > a, #fn-7 > p > a, #fn-8 > p > a, 
+#fn-9 > p > a, #fn-10 > p > a {
+  color: hsla(0, 0%, 0%, 0.54);
+  background-color: transparent;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: objects;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+  display: block;
+  margin: inherit auto;
+}
+
+hr {
+  border-top: 1px solid $color-gray-border;
+  max-width: $layout-post-width;
+  color: $color-base;
+  @include line-height(1);
+  @include margin-bottom(1);
+  @include margin-top(1);
+}
+
+#logo {
+  margin-top: 52px;
+  margin-bottom: 52px;
+  border: 0;
+  color: $color-base;
+  display: block;
+  height: 26px;
+  margin-right: auto;
+  margin-left: auto;
+  background-size: 100% 26px;
+  background-image: linear-gradient(to bottom, transparent 1px, transparent 11px, $color-base 11px, $color-base 15px, transparent 15px, transparent 26px);
+  width: 100px;
+}
+
+a {
+  color: $typographic-link-p-font-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $typographic-link-s-font-color;
+  }
+
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+ul {
+  list-style: square;
+  @include margin-bottom(1);
+
+  & li {
+    padding: 0 5px;
+    margin-bottom: 10px;
+  }
+
+}
+
+p {
+  @include line-height(1);
+  @include margin-bottom(1);
+}
+
+blockquote {
+  padding: 0;
+  font-style: italic;
+  text-align: center;
+}
+
+figure {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  @include line-height(.75);
+  @include margin-top(.25);
+  color: $color-base;
+  font-size: $typographic-small-font-size;
+  font-style: italic;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.anchor {
+  margin-left: -30px !important;
+  padding-right: 14px !important;
+}
+
+@include breakpoint-sm {
+  figure.float-left,
+  figure.float-right {
+    max-width: 310px;
+    @include padding(0, 1, 0, 1);
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .float-left {
+    float: left;
+  }
+
+}
